@@ -3,6 +3,14 @@
 	font-family: 'Pretendard';
     src: url('./font/Pretendard-Regular.woff2') format("woff2");
 }
+@font-face {
+	font-family: 'Pretendard-semib';
+    src: url('./font/Pretendard-SemiBold.woff2') format("woff2");
+}
+@font-face {
+	font-family: 'Pretendard-bold';
+    src: url('./font/Pretendard-Bold.woff2') format("woff2");
+}
 
 /* Common */
 body,
