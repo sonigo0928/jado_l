@@ -33,35 +33,6 @@
 					</div>
 					<button type="button" class="btn_search"><i class="ico search"><em>검색</em></i></button>
 				</form>
-				<div class="result_box">
-					<div class="inr">
-						<!-- 반복 -->
-						<div class="box">
-							<a href="#">
-								<div class="addr">
-									<b>개포 577-1</b>
-									<span>서울특별시 강남구 개포동 577-1</span>
-								</div>
-							</a>
-						</div>
-						<div class="box">
-							<a href="#">
-								<div class="addr">
-									<b>경기도 수원시 <span class="cor_blue">권선구</span>구운동 463</b>
-									<span>수성로 18(구운동 강남아파트)</span>
-								</div>
-							</a>
-						</div>
-						<!--// 반복 -->
-						<!--[D] : 내용 없을시 사용하시면 됩니다.-->
-						<div class="box">
-							<span>조회된 주소가 없습니다.<br>도로명 또는 지번주소를 다시 확인하세요.</span>
-						</div>
-						<div class="close">
-							<button type="button" >닫기</button>
-						</div>
-					</div>
-				</div>
 			</div>
 			<div class="record_list">
 				<button type="button"><i class="ico clock"><em>검색이력</em></i><span>검색이력</span></button>
@@ -94,6 +65,232 @@
 		<div class="content">
 			<!-- 지도영역 -->
 			<div class="map"></div>
+			<div class="btn_group posi_left modal_btn on">
+				<button type="button" class="primary"><span>건축가능여부 확인</span>&nbsp;&nbsp;<i class="ico btn_icon_ck"><em>체크</em></i></button>
+			</div>
+			<div class="modal btn_modal scroll_y on">
+			<div class="modal_content">
+				<div class="inr">
+					<div class="modal_body">
+						<article class="mg_b25">
+							<div class="inr">
+								<table class="standard">
+									<caption>대지개요 테이블</caption>
+									<colgroup>
+										<col style="width:100px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>기준필지</th>
+											<td>수유동 472-249 (241㎡)</td>
+										</tr>
+										<tr>
+											<th>합필지</th>
+											<td>수유동 472-249 (254㎡)</td>
+										</tr>
+										<tr>
+											<th><strong>전체면적</strong></th>
+											<td><strong>1,094㎡</strong></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</article>
+						<article class="mg_b25">
+							<div class="inr">
+								<table class="standard table_input">
+									<caption>검토조회 테이블</caption>
+									<colgroup>
+										<col style="width:90px">
+										<col>
+										<col style="width:70px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th colspan="1">건축물 용도</th>
+											<td colspan="3">
+												<div class="field_box">
+													<input type="text" id="" name="" value=""title="건축물 용도를 입력해주세요.">
+													<button type="button">조회</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>건폐율</th>
+											<td>
+												<div class="field_box">
+													<input type="text" id="" name="" value=""title="건축물 용도를 입력해주세요.">
+													<span>%</span>
+												</div>
+											</td>
+											<th>건축면적</th>
+											<td>
+												<div class="field_box">
+													<input type="text" id="" name="" value=""title="건축면적을 입력해주세요.">
+													<span>㎡</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>지상층수</th>
+											<td>
+												<div class="field_box">
+													<input type="text" id="" name="" value=""title="지상층수를 입력해주세요.">
+													<span>층</span>
+												</div>
+											</td>
+											<th>층고</th>
+											<td>
+												<div class="field_box">
+													<input type="text" id="" name="" value=""title="건축 층고를 입력해주세요.">
+													<span>m</span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</article>
+					</div>
+					<div class="btn_group mg_b0">
+						<button type="button" class="primary">건축 가능여부 검토</button>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="map_nav">
+				<div class="box">
+					<!--[D] 활성화시 버튼 class active 넣어주세요 -->
+					<div class="item">
+						<button type="button">지도</button>
+					</div>
+					<div class="item">
+						<button type="button">스카이뷰</button>
+					</div>
+					<div class="item">
+						<button type="button">지적도</button>
+					</div>
+					<div class="item">
+						<button type="button">입지<br>정보</button>
+						<ul class="map_keyword" style="display:none;">
+							<li>
+								<a href="#">
+									<i class="ico map_icon01"><em>아이콘</em></i>
+									<span>대형마트</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon02"><em>아이콘</em></i>
+									<span>편의점</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon03"><em>아이콘</em></i>
+									<span>어린이집/유치원</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon04"><em>아이콘</em></i>
+									<span>학교</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon05"><em>아이콘</em></i>
+									<span>학원</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon06"><em>아이콘</em></i>
+									<span>주차장</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon07"><em>아이콘</em></i>
+									<span>주유정보</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon08"><em>아이콘</em></i>
+									<span>지하철역</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon09"><em>아이콘</em></i>
+									<span>은행</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon10"><em>아이콘</em></i>
+									<span>문화시설</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon11"><em>아이콘</em></i>
+									<span>중개업소</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon12"><em>아이콘</em></i>
+									<span>공공기관</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon13"><em>아이콘</em></i>
+									<span>관광명소</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon14"><em>아이콘</em></i>
+									<span>숙박</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon15"><em>아이콘</em></i>
+									<span>음식점</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon16"><em>아이콘</em></i>
+									<span>카페</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon17"><em>아이콘</em></i>
+									<span>병원</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="ico map_icon18"><em>아이콘</em></i>
+									<span>약국</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box zoom">
+					<button type="button"><i class="ico zoomin"><em>크게보기</em></i></button>
+					<button type="button"><i class="ico zoomout"><em>작게보기</em></i></button>
+				</div>
+			</div>
 			<!--// 지도영역 -->
 			<div class="sid_cnt">
 				<div class="inr scroll_y">
@@ -109,7 +306,7 @@
 							<button type="button">건축검토결과</button>
 						</div>
 						<div class="content">
-							<div class="box">
+							<div class="box on">
 								<article>
 									<span class="title">토지정보</span>
 									<div class="inr">
@@ -292,7 +489,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="box on">
+							<div class="box">
 								<div class="alarm red">
 									<i class="ico mark_red01"><em>경고</em></i>
 									<span>건축 가능여부 검토 결과가 없습니다.</span>
@@ -381,12 +578,12 @@
 												<tr>
 													<th>건축물 용도</th>
 													<td>단독주택</td>
-													<td>가능</td>
+													<td class="cor_blue">가능</td>
 												</tr>
 												<tr>
 													<th>건폐율/최대건폐율</th>
 													<td>80/80%</td>
-													<td>가능</td>
+													<td class="cor_blue">가능</td>
 												</tr>
 												<tr>
 													<th>용적률/최대용적률</th>
@@ -395,8 +592,8 @@
 												</tr>
 												<tr>
 													<th>건축면적/최대건축면적</th>
-													<td>800/1,094㎡ </td>
-													<td>가능</td>
+													<td>800/1,094㎡ </td>
+													<td class="cor_blue">가능</td>
 												</tr>
 												<tr>
 													<th>주차장</th>
@@ -423,5 +620,150 @@
 		</div>
 	</main>
 	<!-- //container -->
+	<!-- alret -->
+	<!--[D] 경고창 뜰때 class on 추가해주세요.-->
+	<div class="s_alret on">
+		<strong>추가 (다수)필지 선택이 가능 합니다.</strong>
+		<button type="button"><i class="ico btn_icon_cl"><em>닫기</em></i></button>
+	</div>
+	<!--// alret -->
+
+	<!--[D] 조건 결과 값 팝업형태-->
+	<div class="popup_content">
+		<div class="inr scroll_y">
+			<div class="p_header">
+				<strong>건축 가능여부 리포트</strong>
+			</div>
+			<div class="p_body">
+				<form method="" name="" action="">
+					<fieldset>
+						<legend>건축 가능여부 입력폼</legend>
+						<div class="row">
+							<div class="col s12">
+								<div class="col s6">
+									<div class="select_box">
+										<button type="button">선택<i class="ico arrow_down"><em>펼치기</em></i></button>
+										<ul class="option_list">
+											<li class="option" tabindex="0">주거용</li>
+											<li class="option" tabindex="0">상업/업무용</li>
+											<li class="option" tabindex="0">문화/체육집회용</li>
+											<li class="option" tabindex="0">의료/복지용</li>
+											<li class="option" tabindex="0">교육용</li>
+											<li class="option" tabindex="0">산업용</li>
+											<li class="option" tabindex="0">기타</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col s6">
+									<div class="select_box">
+										<button type="button">건물용도<i class="ico arrow_down"><em>펼치기</em></i></button>
+										<ul class="option_list">
+											<li class="option" tabindex="0">다가구주택</li>
+											<li class="option" tabindex="0">단독주택</li>
+											<li class="option" tabindex="0">다중주택</li>
+											<li class="option" tabindex="0">공관</li>
+											<li class="option" tabindex="0">다세대주택</li>
+											<li class="option" tabindex="0">기숙사</li>
+											<li class="option" tabindex="0">연립주택</li>
+											<li class="option" tabindex="0">아파트</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col s12 mg_t16">
+								<div class="col s4">
+									<div class="select_box">
+										<button type="button">가능여부<i class="ico arrow_down"><em>펼치기</em></i></button>
+										<ul class="option_list">
+											<li class="option" tabindex="0">가능</li>
+											<li class="option" tabindex="0">불가능</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col s8">
+									<div class="search_box btn_txt">
+										<div class="input_box">
+											<input type="search" title="건축물 상세 용도를 입력해주세요." placeholder="건축물 상세 용도를 입력해주세요.">
+										</div>
+										<button type="button">조회</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+				<div class="result_box mg_t40">
+					<article class="mg_b25">
+						<span class="title">토지정보</span>
+						<div class="inr">
+							<table class="standard line_left txt_center">
+								<caption>토지정보 테이블</caption>
+								<colgroup>
+									<col style="width:95px">
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>분류</th>
+										<th>건축물 용도</th>
+										<th>건물 상세 용도</th>
+										<th>가능여부</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="9">행위제한</td>
+									</tr>
+									<tr>
+										<td rowspan="4"><a href="#">단독주택</a></td>
+										<td>다가구주택</td>
+										<td class="cor_blue">가능</td>
+									</tr>
+									<tr>
+										<td>단독주택</td>
+										<td class="cor_blue">가능</td>
+									</tr>
+									<tr>
+										<td>다중주택</td>
+										<td class="cor_blue">가능</td>
+									</tr>
+									<tr>
+										<td>공관</td>
+										<td class="cor_blue">가능</td>
+									</tr>
+									<tr>
+										<td rowspan="4"><a href="#">공동주택</a></td>
+										<td>다세대주택</td>
+										<td class="cor_blue">가능</td>
+									</tr>
+									<tr>
+										<td>기숙사</td>
+										<td class="cor_blue">가능</td>
+									</tr>
+									<tr>
+										<td>연립주택</td>
+										<td class="cor_blue">가능</td>
+									</tr>
+									<tr>
+										<td>아파트</td>
+										<td class="cor_red">불가능</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</article>
+				</div>
+			</div>
+			<div class="p_footer">
+				<div class="function_box">
+					<div class="btn_group">
+						<button type="button" class="close" title="닫기"><i class="ico close"><em>아이콘</em></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dim"></div>
 </body>
 </html>

@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/png" href="../../static/images/favicon.png">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../../static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/materialize.min.css">
+	<!-- jquery -->
+	<script type="text/javascript" src="../../static/js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../../static/js/ui.js"></script>
+	<script type="text/javascript" src="../../static/js/materialize.min.js"></script>
+	<title>건축가능여부서비스</title>
+</head>
+<body>
+	<!-- skip -->
+	<div id="u_skip">
+		<a href="#container"><span>본문 바로가기</span></a>
+	</div>
+	<!-- //skip -->
+	<!-- header -->
+	<header id="header">
+		<div class="inr">
+			<h1>
+				<a href="#" title="바로가기"><i class="ico logo"><em>건축가능여부서비스</em></i></a>
+			</h1>
+			<div class="main_search">
+				<form id="" name="search" role="search">
+					<div class="search_input">
+						<input type="search" title="주소를 검색하세요" placeholder="주소를 검색하세요" >
+					</div>
+					<button type="button" class="btn_search"><i class="ico search"><em>검색</em></i></button>
+				</form>
+			</div>
+			<div class="record_list">
+				<button type="button"><i class="ico clock"><em>검색이력</em></i><span>검색이력</span></button>
+				<div class="list_box">
+					<div class="inr">
+						<span class="title">검색결과 이력</span>
+						<!-- 반복 -->
+						<div class="box">
+							<div class="addr">
+								<b>개포 577-1</b>
+								<span>서울특별시 강남구 개포동 577-1</span>
+							</div>
+							<div class="date">2024.03.13</div>
+							<button type="button"><i class="ico modal_del"><em>삭제</em></i></button>
+						</div>
+						<!--[D] : 내용 없을시 사용하시면 됩니다.-->
+						<div class="box">
+							<span>이력이 없습니다.</span>
+						</div>
+						<!--// 반복 -->
+						<button type="button" class="close_btn" title="닫기"><i class="ico close"><em>닫기</em></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- //header -->
+	<!-- container -->
+	<main id="container">
+		<div class="content">
+			<!-- 지도영역 -->
+			<div class="map"></div>
+			<div class="btn_group posi_left modal_btn">
+				<button type="button" class="primary"><span>건축가능여부 확인</span>&nbsp;&nbsp;<i class="ico btn_icon_ck"><em>체크</em></i></button>
+			</div>
+			<div class="modal btn_modal scroll_y">
+			<div class="modal_content">
+				<div class="inr">
+					<div class="modal_body">
+						<article class="mg_b25">
+							<div class="inr">
+								<table class="standard">
+									<caption>대지개요 테이블</caption>
+									<colgroup>
+										<col style="width:100px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>기준필지</th>
+											<td>수유동 472-249 (241㎡)</td>
+										</tr>
+										<tr>
+											<th>합필지</th>
+											<td>수유동 472-249 (254㎡)</td>
+										</tr>
+										<tr>
+											<th><strong>전체면적</strong></th>
+											<td><strong>1,094㎡</strong></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</article>
+						<article class="mg_b25">
+							<div class="inr ">
+								<table class="standard table_input">
+									<caption>검토조회 테이블</caption>
+									<colgroup>
+										<col style="width:90px">
+										<col>
+										<col style="width:70px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th colspan="1">건축물 용도</th>
+											<td colspan="3">
+												<div class="field_box">
+													<input type="text" id="" name="" value=""title="건축물 용도를 입력해주세요.">
+													<button type="button">조회</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>건폐율</th>
+											<td>
+												<div class="field_box">
+													<input type="text" id="" name="" value=""title="건축물 용도를 입력해주세요.">
+													<span>%</span>
+												</div>
+											</td>
+											<th>건축면적</th>
+											<td>
+												<div class="field_box">
+													<input type="text" id="" name="" value=""title="건축면적을 입력해주세요.">
+													<span>㎡</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>지상층수</th>
+											<td>
+												<div class="field_box">
+													<input type="text" id="" name="" value=""title="지상층수를 입력해주세요.">
+													<span>층</span>
+												</div>
+											</td>
+											<th>층고</th>
+											<td>
+												<div class="field_box">
+													<input type="text" id="" name="" value=""title="건축 층고를 입력해주세요.">
+													<span>m</span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</article>
+					</div>
+					<div class="btn_group mg_b0">
+						<button type="button" class="primary">건축 가능여부 검토</button>
+					</div>
+				</div>
+			</div>
+			</div>
+			<!--// 지도영역 -->
+			<div class="sid_cnt">
+				<div class="inr scroll_y">
+					<div class="title">
+						<strong>경기도수원시권선구 구운동 463</strong>
+						<span>경기도 수원시 권선구 수성로 18</span>
+					</div>
+					<div class="tab_group">
+						<div class="list_btn">
+							<button type="button">토지정보</button>
+							<button type="button">입지정보</button>
+							<button type="button">건축가능용도</button>
+							<button type="button" class="on">건축검토결과</button>
+						</div>
+						<div class="content">
+							<div class="box">
+								<article>
+									<span class="title">토지정보</span>
+									<div class="inr">
+										<table class="standard txt_center">
+											<caption>토지정보 테이블</caption>
+											<colgroup>
+												<col style="width:95px">
+												<col>
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th>규제법령</th>
+													<th>선계내역</th>
+													<th>검토결과</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>행위제한</td>
+													<td>용도 : 다세대주택</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>건폐율</td>
+													<td>계획건폐율 : 50.5 %</td>
+													<td>적합</td>
+												</tr>
+												<tr>
+													<td>용적률</td>
+													<td>계획용적률 : 151.5 %</td>
+													<td>적합</td>
+												</tr>
+												<tr>
+													<td>주차장</td>
+													<td>용도 : 다세대주택<br>
+														계획건축면적 : 250 ㎡</td>
+													<td>1대</td>
+												</tr>
+												<tr>
+													<td>층수·높이제한</td>
+													<td>10m 이하</td>
+													<td>해당없음</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</article>
+								<article>
+									<span class="title">공시지가</span>
+									<div class="inr">
+										<table class="standard">
+											<caption>공시지가 테이블</caption>
+											<colgroup>
+												<col style="width:100px">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>2023년</th>
+													<td>서울특별시강북구 수유동 472-249</td>
+												</tr>
+												<tr>
+													<th>2022년</th>
+													<td>제2종일반주거지역</td>
+												</tr>
+												<tr>
+													<th>2021년</th>
+													<td>495㎡ (149.7평)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</article>
+							</div>
+							<div class="box">
+								입지정보 내용
+							</div>
+							<div class="box">
+								<div class="jelly_box">
+									<!-- 번복 -->
+									<div class="item">
+										<b class="title">
+											<i class="ico icon_01"><em>아이콘</em></i>
+											<span class="name">주거용 (단독주택, 아파트 등)</span>
+											<span class="cor_purple">전체 8종</span>
+										</b>
+										<a href="#" title="새창">
+											<div>
+												<span>가능한 건축물 7종</span>
+												<span class="refuse">불가능한 건축물 1종</span>
+											</div>
+											<i class="ico arrow"><em>이동</em></i>
+										</a>
+									</div>
+									<!--// 번복 -->
+									<div class="item">
+										<b class="title">
+											<i class="ico icon_02"><em>아이콘</em></i>
+											<span class="name">상업/업무용 (사무소, 오피스텔 등)</span>
+											<span class="cor_purple">전체 8종</span>
+										</b>
+										<a href="#" title="새창">
+											<div>
+												<span>가능한 건축물 7종</span>
+												<span class="refuse">불가능한 건축물 1종</span>
+											</div>
+											<i class="ico arrow"><em>이동</em></i>
+										</a>
+									</div>
+									<div class="item">
+										<b class="title">
+											<i class="ico icon_03"><em>아이콘</em></i>
+											<span class="name">문화/체육/집회용 (박물관, 체육관 등)</span>
+											<span class="cor_purple">전체 8종</span>
+										</b>
+										<a href="#" title="새창">
+											<div>
+												<span>가능한 건축물 7종</span>
+												<span class="refuse">불가능한 건축물 1종</span>
+											</div>
+											<i class="ico arrow"><em>이동</em></i>
+										</a>
+									</div>
+									<div class="item">
+										<b class="title">
+											<i class="ico icon_04"><em>아이콘</em></i>
+											<span class="name">의료/복지용 (산후조리원, 어린이집 등)</span>
+											<span class="cor_purple">전체 8종</span>
+										</b>
+										<a href="#" title="새창">
+											<div>
+												<span>가능한 건축물 7종</span>
+												<span class="refuse">불가능한 건축물 1종</span>
+											</div>
+											<i class="ico arrow"><em>이동</em></i>
+										</a>
+									</div>
+									<div class="item">
+										<b class="title">
+											<i class="ico icon_05"><em>아이콘</em></i>
+											<span class="name">교육용 (대학교, 학원 등)</span>
+											<span class="cor_purple">전체 8종</span>
+										</b>
+										<a href="#" title="새창">
+											<div>
+												<span>가능한 건축물 7종</span>
+												<span class="refuse">불가능한 건축물 1종</span>
+											</div>
+											<i class="ico arrow"><em>이동</em></i>
+										</a>
+									</div>
+									<div class="item">
+										<b class="title">
+											<i class="ico icon_06"><em>아이콘</em></i>
+											<span class="name">산업용 (공장, 창고 등)</span>
+											<span class="cor_purple">전체 8종</span>
+										</b>
+										<a href="#" title="새창">
+											<div>
+												<span>가능한 건축물 7종</span>
+												<span class="refuse">불가능한 건축물 1종</span>
+											</div>
+											<i class="ico arrow"><em>이동</em></i>
+										</a>
+									</div>
+									<div class="item">
+										<b class="title">
+											<i class="ico icon_07"><em>아이콘</em></i>
+											<span class="name">기타 (공중화장실, 도축장 등)</span>
+											<span class="cor_purple">전체 8종</span>
+										</b>
+										<a href="#" title="새창">
+											<div>
+												<span>가능한 건축물 7종</span>
+												<span class="refuse">불가능한 건축물 1종</span>
+											</div>
+											<i class="ico arrow"><em>이동</em></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="box on">
+								<div class="alarm red">
+									<i class="ico mark_red01"><em>경고</em></i>
+									<span>건축 가능여부 검토 결과가 없습니다.</span>
+								</div>
+								<!-- 불가능 알림
+								<div class="alarm red">
+									<i class="ico mark_red02"><em>불가</em></i>
+									<span>해당 건축물은 건축 (불)가능합니다.</span>
+								</div>
+								-->
+								<article>
+									<span class="title">대지개요</span>
+									<div class="inr">
+										<table class="standard">
+											<caption>대지개요 테이블</caption>
+											<colgroup>
+												<col style="width:100px">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>기준필지</th>
+													<td>수유동 472-249 (241㎡)</td>
+												</tr>
+												<tr>
+													<th>합필지</th>
+													<td>수유동 472-249 (254㎡)</td>
+												</tr>
+												<tr>
+													<th><strong>전체면적</strong></th>
+													<td><strong>1,094㎡</strong></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</article>
+								<article>
+									<span class="title">검토결과</span>
+									<div class="inr">
+										<table class="standard">
+											<caption>검토결과 테이블</caption>
+											<colgroup>
+												<col style="width:150px">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>건축물 용도</th>
+													<td></td>
+												</tr>
+												<tr>
+													<th>건폐율/최대건폐율</th>
+													<td>/80%</td>
+												</tr>
+												<tr>
+													<th>용적률/최대용적률</th>
+													<td>/200%</td>
+												</tr>
+												<tr>
+													<th>건축면적/최대건축면적</th>
+													<td>/1,094㎡</td>
+												</tr>
+												<tr>
+													<th>주차장</th>
+													<td></i></td>
+												</tr>
+												<tr>
+													<th>층수 높이제한 </th>
+													<td></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</article>
+								<article>
+									<span class="title">검토결과</span>
+									<div class="inr">
+										<table class="standard">
+											<caption>검토결과 테이블</caption>
+											<colgroup>
+												<col style="width:150px">
+												<col>
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>건축물 용도</th>
+													<td>단독주택</td>
+													<td>가능</td>
+												</tr>
+												<tr>
+													<th>건폐율/최대건폐율</th>
+													<td>80/80%</td>
+													<td>가능</td>
+												</tr>
+												<tr>
+													<th>용적률/최대용적률</th>
+													<td>160/200%</td>
+													<td class="cor_red">가능</td>
+												</tr>
+												<tr>
+													<th>건축면적/최대건축면적</th>
+													<td>800/1,094㎡ </td>
+													<td>가능</td>
+												</tr>
+												<tr>
+													<th>주차장</th>
+													<td>1대</td>
+													<td><i class="ico icon_info"><em>정보</em></i></td>
+												</tr>
+												<tr>
+													<th>층수 높이제한 </th>
+													<td>10m 이하</td>
+													<td>해당없음</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</article>
+								<div class="btn_group">
+									<button type="button" class="basic primary">리포트 보기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- //container -->
+	<div class="popup_content">
+		<div class="inr">
+			<div class="p_header">
+				<strong>건축 가능여부 리포트</strong>
+			</div>
+			<div class="p_body">
+				<div class="scroll_y">
+					<!-- table 형식 div width:100% = s12 -->
+					<div class="row">
+						<div class="col s12">
+							<div class="col s6">
+								<article>
+									<span class="title mg_t0">대지현황</span>
+									<div class="inr">
+										<table class="standard">
+											<caption>대지현황 테이블</caption>
+											<colgroup>
+												<col style="width:100px">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>위치</th>
+													<td>경상남도 밀양시 산외면 남기리241 (남기4길 77-12)</td>
+												</tr>
+												<tr>
+													<th>용도지역</th>
+													<td>계획관리지역</td>
+												</tr>
+												<tr>
+													<th>토지목록</th>
+													<td>가축사육제한구역(전부제한구역),<br>배출시설설치제한지역</td>
+												</tr>
+												<tr>
+													<th>지목</th>
+													<td>대</td>
+												</tr>
+												<tr>
+													<th>토지면적</th>
+													<td>241㎡ (98.01평)</td>
+												</tr>
+												<tr>
+													<th>최대건폐율</th>
+													<td>40%</td>
+												</tr>
+												<tr>
+													<th>최대용적률</th>
+													<td>100%</td>
+												</tr>
+												<tr>
+													<th>주용도</th>
+													<td>단독</td>
+												</tr>
+												<tr>
+													<th>도록측면</th>
+													<td>세로한면(불)</td>
+												</tr>
+												<tr>
+													<th>지형형상</th>
+													<td>사다리형</td>
+												</tr>
+												<tr>
+													<th>지형높이</th>
+													<td>평지</td>
+												</tr>
+												<tr>
+													<th>공시지가</th>
+													<td>133,400원</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</article>
+							</div>
+							<div class="col s6">
+								<article>
+									<span class="title mg_t0">지적도</span>
+									<div class="imgbox">
+										<img src="../../static/images/sample_img01.png" title="지적도 이미지">
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="col s12">
+							<div class="col s6">
+								<article>
+									<span class="title">합필목록</span>
+									<div class="inr">
+										<table class="standard">
+											<caption>합필목록 테이블</caption>
+											<colgroup>
+												<col style="width:100px">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>토지수</th>
+													<td>총 3개</td>
+												</tr>
+												<tr>
+													<th>전체면적</th>
+													<td>1,094㎡</td>
+												</tr>
+												<tr>
+													<th rowspan="3">토지목록</th>
+													<td>경상남도 밀양시 산외면 남기리 241&nbsp;&nbsp;&nbsp;&nbsp;324㎡</td>
+												</tr>
+												<tr>
+													<td>경상남도 밀양시 산외면 남기리 241&nbsp;&nbsp;&nbsp;&nbsp;358㎡</td>
+												</tr>
+												<tr>
+													<td>경상남도 밀양시 산외면 남기리 241&nbsp;&nbsp;&nbsp;&nbsp;412%</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</article>
+							</div>
+							<div class="col s6">
+								<article>
+									<span class="title">입지정보</span>
+									<div class="imgbox">
+										<img src="../../static/images/sample_img02.png" title="입지정보 이미지">
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="col s12">
+							<div class="col s6">
+								<article>
+									<span class="title">설계현황</span>
+									<div class="inr">
+										<table class="standard">
+											<caption>설계현황 테이블</caption>
+											<colgroup>
+												<col style="width:100px">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>대지위치</th>
+													<td>경상남도 밀양시 산외면 남기리241</td>
+												</tr>
+												<tr>
+													<th>지역지구</th>
+													<td>계획관리지역, 가축사육제한구역(전부제한구역),
+														배출시설설치제한지역</td>
+												</tr>
+												<tr>
+													<th>대지면적</th>
+													<td>단독주택</td>
+												</tr>
+												<tr>
+													<th>용도</th>
+													<td>층수(지하) : 지상 6층 / 높이 : 15m</td>
+												</tr>
+												<tr>
+													<th>건축면적</th>
+													<td>324.94㎡ (98.2평)</td>
+												</tr>
+												<tr>
+													<th>연면적</th>
+													<td>324.94㎡ (98.2평)</td>
+												</tr>
+												<tr>
+													<th>건축면적</th>
+													<td>324.94㎡ (98.2평)</td>
+												</tr>
+												<tr>
+													<th>건축면적</th>
+													<td>324.94㎡ (98.2평)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</article>
+							</div>
+							<div class="col s6">
+								<article>
+									<div class="imgbox mg_t65">
+										<img src="../../static/images/sample_img03.png" title="설계현황 이미지">
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="col s12">
+							<div class="col s12">
+								<article>
+									<span class="title">공시지가</span>
+									<div class="inr">
+										<table class="standard txt_center">
+											<caption>공시지가 테이블</caption>
+											<colgroup>
+												<col>
+												<col>
+												<col>
+												<col>
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>2019년</th>
+													<th>2020년</th>
+													<th>2021년</th>
+													<th>2022년</th>
+													<th>2023년</th>
+												</tr>
+												<tr>
+													<td>2,328,000</td>
+													<td>2,328,000</td>
+													<td>2,778,000</td>
+													<td>3,153,000</td>
+													<td>2,934,000</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="col s12">
+							<div class="col s12">
+								<article>
+									<span class="title">검토결과</span>
+									<div class="inr">
+										<table class="standard txt_center">
+											<caption>검토결과 테이블</caption>
+											<colgroup>
+												<col style="width:80px">
+												<col style="width:80px">
+												<col>
+												<col style="width:80px">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>규제법령</th>
+													<th>검토결과</th>
+													<th>법정기준</th>
+													<th>설계내역</th>
+													<th>관련법규</th>
+												</tr>
+												<tr>
+													<td>행위제한</td>
+													<td>적합</td>
+													<td>
+														단독주택:단독주주택, 다중주택,다가구주택, 공관<br><br>
+														공동주택:연립주택, 다세대주택, 기숙사
+													</td>
+													<td>단독주택</td>
+													<td class="txt_l">
+														국토의계획및이용에관한법률 제76조(용도지역 및 용도지구에서의 건축물의 건축제한 등)<br><br>
+														국토의계획및이용에관한법률 시행령 제71조(용도지역안에서의 건축제한)<br><br>
+														국토의계획및이용에관한법률 시행령 제72조_제82조(용도지구안에서의건축물의 건축제한 등)<br><br>
+														국토의계획및이용에관한법률 시행령 별표 2~24
+													</td>
+												</tr>
+												<tr>
+													<td>건폐율</td>
+													<td>적합</td>
+													<td>40%</td>
+													<td>29.6%</td>
+													<td class="txt_l">
+														국토의계획및이용에관한법률 제77조(용도지역의 건폐율)<br><br>
+														국토의계획및이용에관한법률 시행령 제84조(용도지역안에서의 건폐율)<br><br>
+														건축법 제 56조(건축물의 건폐율)
+													</td>
+												</tr>
+												<tr>
+													<td>용적률</td>
+													<td>적합</td>
+													<td>100%</td>
+													<td>98.2%</td>
+													<td class="txt_l">
+														국토의계획및이용에관한법률 제77조(용도지역의 건폐율)<br><br>
+														국토의계획및이용에관한법률 시행령 제85조(용도지역안에서의 용적률)<br><br>
+														건축법 제 56조(건축물의 용적률)
+													</td>
+												</tr>
+												<tr>
+													<td>주차장</td>
+													<td>적합</td>
+													<td>
+														시설면적 50㎡ 초과\
+														150㎡ 이하: 1대
+													</td>
+													<td>1대</td>
+													<td class="txt_l">
+														주차장법 제 19조(부설주차장의 설치)<br><br>
+														주차장법 시행령 제 6조(부설주차장의 설치기준)<br><br>
+														주차장법 시행령 별표 1(부설주차장의 설치대상 시설물 종류 및 설치기준)<br><br>
+														주차장법 시행규칙 제 11조(부설주차장의 구조설비기준)<br><br>
+														주택건설기준 등에 관한 규정 제27조(주차장)<br><br>
+														주택건설기준 등에 관한 규칙 제 6조의2(주차장의 구조 및 설비)
+													</td>
+												</tr>
+												<tr>
+													<td>층수·높이 제한</td>
+													<td>확인<br>필요</td>
+													<td>
+														높이 10미터를 초과하는 부분: 
+														인접대지경계선으로부터 해당
+														건축물 각 부분 높이의 2분의 1이상
+													</td>
+													<td>10미터 초과</td>
+													<td class="txt_l">
+														주차장법 제 19조(부설주차장의 설치)<br><br>
+														주차장법 시행령 제 6조(부설주차장의 설치기준)<br><br>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="col s12">
+							<div class="col s12">
+								<article>
+									<span class="title">안내사항</span>
+									<div class="guidebox">
+										<span>건축선</span>
+										<div class="imgbox md_08">
+											<img src="../../static/images/sample_img04.png" title="건축선 이미지">
+										</div>
+									</div>
+									<div class="guidebox mg_t16">
+										<span>층수·높이제한</span>
+										<div class="imgbox md_08">
+											<img src="../../static/images/sample_img05.png" title="건축선 이미지">
+										</div>
+									</div>
+								</article>
+								<article>
+									<span class="title">안내사항 - 건축선</span>
+									<div class="guidebox">
+										<span>도로 소요너비(4m) 확보를 위한 건축선 후퇴</span>
+										<div class="imgbox">
+											<img src="../../static/images/sample_img06.png" title="건축선 이미지">
+										</div>
+									</div>
+									<div class="guidebox mg_t16">
+										<span>도로 모퉁이 부분 건축선 후퇴</span>
+										<div class="imgbox">
+											<img src="../../static/images/sample_img07.png" title="건축선 이미지">
+										</div>
+									</div>
+								</article>
+								<article>
+									<span class="title">안내사항 - 층수·높이제한</span>
+									<div class="guidebox">
+										<span>일조권 높이 제한</span>
+										<div class="imgbox">
+											<img src="../../static/images/sample_img08.png" title="층수·높이제한 이미지">
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+					<div class="btn_group" >
+						<button type="button" class="primary" style="width:368px"><i class="ico icon_down"><em>다운로드아이콘</em></i>&nbsp;&nbsp;<span>리포트 다운로드</span></button>
+					</div>
+					<!-- table 형식 div -->
+				</div>
+			</div>
+			<div class="p_footer">
+				<div class="function_box">
+					<div class="btn_group">
+						<button type="button" class="secondary"><i class="ico icon_print"><em>아이콘</em></i><span>&nbsp;인쇄하기</span></button>
+						<button type="button" class="secondary"><i class="ico icon_downg"><em>아이콘</em></i><span>&nbsp;다운로드</span></button>
+						<button type="button" class="close" title="닫기"><i class="ico close"><em>아이콘</em></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dim"></div>
+</body>
+</html>

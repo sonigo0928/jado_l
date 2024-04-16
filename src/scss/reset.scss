@@ -112,3 +112,10 @@ section,
 footer{
 	display:block;
 }
+
+/*커스텀 테이블 공통조절*/
+.row{
+	& > .col{
+		padding:0 !important;
+	}
+}

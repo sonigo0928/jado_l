@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/png" href="../../static/images/favicon.png">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../../static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/materialize.min.css">
+	<!-- jquery -->
+	<script type="text/javascript" src="../../static/js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../../static/js/ui.js"></script>
+	<script type="text/javascript" src="../../static/js/materialize.min.js"></script>
+	<title>건축가능여부서비스</title>
+</head>
+<body>
+	<!-- skip -->
+	<div id="u_skip">
+		<a href="#container"><span>본문 바로가기</span></a>
+	</div>
+	<!-- //skip -->
+	<!-- header -->
+	<header id="header">
+		<div class="inr">
+			<h1>
+				<a href="#" title="바로가기"><i class="ico logo"><em>건축가능여부서비스</em></i></a>
+			</h1>
+			<div class="main_search">
+				<form id="" name="search" role="search">
+					<div class="search_input">
+						<input type="search" title="주소를 검색하세요" placeholder="주소를 검색하세요" >
+					</div>
+					<button type="button" class="btn_search"><i class="ico search"><em>검색</em></i></button>
+				</form>
+			</div>
+			<div class="record_list">
+				<button type="button"><i class="ico clock"><em>검색</em></i><span>검색이력</span></button>
+			</div>
+		</div>
+	</header>
+	<!-- //header -->
+	<!-- container -->
+	<main id="container">
+		<div class="content example_tab" style="padding-top:80px;">
+			<div class="tab_group">
+				<div class="list_btn">
+					<button type="button" class="on">Input Box</button>
+					<button type="button">테이블</button>
+					<button type="button">버튼</button>
+					<button type="button">알림 / 아이콘</button>
+					<button type="button">팝업</button>
+				</div>
+				<div class="content">
+					<div class="box on">
+						<div class="select_box">
+							<button type="button">선택<i class="ico arrow_down"><em>펼치기</em></i></button>
+							<ul class="option_list">
+								<li class="option" tabindex="0">주거용</li>
+								<li class="option" tabindex="0">상업/업무용</li>
+								<li class="option" tabindex="0">문화/체육집회용</li>
+								<li class="option" tabindex="0">의료/복지용</li>
+								<li class="option" tabindex="0">교육용</li>
+								<li class="option" tabindex="0">산업용</li>
+								<li class="option" tabindex="0">기타</li>
+							</ul>
+						</div>
+						<!-- 테이블 형식으로 박스 자르기 -->
+						<div class="row"> <!-- row div 테이블 형식시작-->
+							<div class="col s12 mg_t16"> <!-- 한줄 , 12개가 화면에 100% 12개로 분할 ,mg_t16 : margin-top값 (기준 16px) -->
+								<div class="col s6"> <!-- 12개를 6개로 한번 더 %로 나눠줌 총합이 12가 되면 자율분할가능 -->
+									<div class="select_box">
+										<button type="button">선택<i class="ico arrow_down"><em>펼치기</em></i></button>
+										<ul class="option_list">
+											<li class="option" tabindex="0">주거용</li>
+											<li class="option" tabindex="0">상업/업무용</li>
+											<li class="option" tabindex="0">문화/체육집회용</li>
+											<li class="option" tabindex="0">의료/복지용</li>
+											<li class="option" tabindex="0">교육용</li>
+											<li class="option" tabindex="0">산업용</li>
+											<li class="option" tabindex="0">기타</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col s6"> <!-- 12개를 6개로 한번 더 %로 나눠줌 총합이 12가 되면 자율분할가능 -->
+									<div class="select_box">
+										<button type="button">선택<i class="ico arrow_down"><em>펼치기</em></i></button>
+										<ul class="option_list">
+											<li class="option" tabindex="0">주거용</li>
+											<li class="option" tabindex="0">상업/업무용</li>
+											<li class="option" tabindex="0">문화/체육집회용</li>
+											<li class="option" tabindex="0">의료/복지용</li>
+											<li class="option" tabindex="0">교육용</li>
+											<li class="option" tabindex="0">산업용</li>
+											<li class="option" tabindex="0">기타</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col s12 mg_t16">
+								<div class="col s6">
+									<div class="search_box btn_txt"> <!-- 검색 버튼이 텍스트 형식 (기본)-->
+										<div class="input_box">
+											<input type="search" title="건축물 상세 용도를 입력해주세요." placeholder="건축물 상세 용도를 입력해주세요.">
+										</div>
+										<button type="button">조회</button>
+									</div>
+								</div>
+								<div class="col s6">
+									<div class="search_box btn_img"> <!-- 검색 버튼이 돋보기(이미지) 형식-->
+										<div class="input_box">
+											<input type="search" title="건축물 상세 용도를 입력해주세요." placeholder="건축물 상세 용도를 입력해주세요.">
+										</div>
+										<button type="button"><i class="ico search_g"><em>조회</em></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="box">
+						<article>
+							<span class="title">토지정보</span>
+							<div class="inr">
+								<table class="standard txt_center">
+									<caption>토지정보 테이블</caption>
+									<colgroup>
+										<col style="width:95px">
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>규제법령</th>
+											<th>선계내역</th>
+											<th>검토결과</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>행위제한</td>
+											<td>용도 : 다세대주택</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>건폐율</td>
+											<td>계획건폐율 : 50.5 %</td>
+											<td>적합</td>
+										</tr>
+										<tr>
+											<td>용적률</td>
+											<td>계획용적률 : 151.5 %</td>
+											<td>적합</td>
+										</tr>
+										<tr>
+											<td>주차장</td>
+											<td>용도 : 다세대주택<br>
+												계획건축면적 : 250 ㎡</td>
+											<td>1대</td>
+										</tr>
+										<tr>
+											<td>층수·높이제한</td>
+											<td>10m 이하</td>
+											<td>해당없음</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</article>
+						<article>
+							<span class="title">공시지가</span>
+							<div class="inr">
+								<table class="standard">
+									<caption>공시지가 테이블</caption>
+									<colgroup>
+										<col style="width:100px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>2023년</th>
+											<td>서울특별시강북구 수유동 472-249</td>
+										</tr>
+										<tr>
+											<th>2022년</th>
+											<td>제2종일반주거지역</td>
+										</tr>
+										<tr>
+											<th>2021년</th>
+											<td>495㎡ (149.7평)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</article>
+						<article>
+							<div class="inr ">
+								<table class="standard table_input">
+									<caption>검토조회 테이블</caption>
+									<colgroup>
+										<col style="width:90px">
+										<col>
+										<col style="width:70px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th colspan="1">건축물 용도</th>
+											<td colspan="3">
+												<div class="field_box">
+													<input type="text" id="" name="" value="" title="건축물 용도를 입력해주세요.">
+													<button type="button">조회</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>건폐율</th>
+											<td>
+												<div class="field_box">
+													<input type="text" id="" name="" value="" title="건축물 용도를 입력해주세요.">
+													<span>%</span>
+												</div>
+											</td>
+											<th>건축면적</th>
+											<td>
+												<div class="field_box">
+													<input type="text" id="" name="" value="" title="건축면적을 입력해주세요.">
+													<span>㎡</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>지상층수</th>
+											<td>
+												<div class="field_box">
+													<input type="text" id="" name="" value="" title="지상층수를 입력해주세요.">
+													<span>층</span>
+												</div>
+											</td>
+											<th>층고</th>
+											<td>
+												<div class="field_box">
+													<input type="text" id="" name="" value="" title="건축 층고를 입력해주세요.">
+													<span>m</span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</article>
+						<article>
+							<span class="title">검토결과</span>
+							<div class="inr">
+								<table class="standard txt_center">
+									<caption>검토결과 테이블</caption>
+									<colgroup>
+										<col style="width:80px">
+										<col style="width:80px">
+										<col>
+										<col style="width:80px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>규제법령</th>
+											<th>검토결과</th>
+											<th>법정기준</th>
+											<th>설계내역</th>
+											<th>관련법규</th>
+										</tr>
+										<tr>
+											<td>행위제한</td>
+											<td>적합</td>
+											<td>
+												단독주택:단독주주택, 다중주택,다가구주택, 공관<br><br>
+												공동주택:연립주택, 다세대주택, 기숙사
+											</td>
+											<td>단독주택</td>
+											<td class="txt_l">
+												국토의계획및이용에관한법률 제76조(용도지역 및 용도지구에서의 건축물의 건축제한 등)<br><br>
+												국토의계획및이용에관한법률 시행령 제71조(용도지역안에서의 건축제한)<br><br>
+												국토의계획및이용에관한법률 시행령 제72조_제82조(용도지구안에서의건축물의 건축제한 등)<br><br>
+												국토의계획및이용에관한법률 시행령 별표 2~24
+											</td>
+										</tr>
+										<tr>
+											<td>건폐율</td>
+											<td>적합</td>
+											<td>40%</td>
+											<td>29.6%</td>
+											<td class="txt_l">
+												국토의계획및이용에관한법률 제77조(용도지역의 건폐율)<br><br>
+												국토의계획및이용에관한법률 시행령 제84조(용도지역안에서의 건폐율)<br><br>
+												건축법 제 56조(건축물의 건폐율)
+											</td>
+										</tr>
+										<tr>
+											<td>용적률</td>
+											<td>적합</td>
+											<td>100%</td>
+											<td>98.2%</td>
+											<td class="txt_l">
+												국토의계획및이용에관한법률 제77조(용도지역의 건폐율)<br><br>
+												국토의계획및이용에관한법률 시행령 제85조(용도지역안에서의 용적률)<br><br>
+												건축법 제 56조(건축물의 용적률)
+											</td>
+										</tr>
+										<tr>
+											<td>주차장</td>
+											<td>적합</td>
+											<td>
+												시설면적 50㎡ 초과\
+												150㎡ 이하: 1대
+											</td>
+											<td>1대</td>
+											<td class="txt_l">
+												주차장법 제 19조(부설주차장의 설치)<br><br>
+												주차장법 시행령 제 6조(부설주차장의 설치기준)<br><br>
+												주차장법 시행령 별표 1(부설주차장의 설치대상 시설물 종류 및 설치기준)<br><br>
+												주차장법 시행규칙 제 11조(부설주차장의 구조설비기준)<br><br>
+												주택건설기준 등에 관한 규정 제27조(주차장)<br><br>
+												주택건설기준 등에 관한 규칙 제 6조의2(주차장의 구조 및 설비)
+											</td>
+										</tr>
+										<tr>
+											<td>층수·높이 제한</td>
+											<td>확인<br>필요</td>
+											<td>
+												높이 10미터를 초과하는 부분: 
+												인접대지경계선으로부터 해당
+												건축물 각 부분 높이의 2분의 1이상
+											</td>
+											<td>10미터 초과</td>
+											<td class="txt_l">
+												주차장법 제 19조(부설주차장의 설치)<br><br>
+												주차장법 시행령 제 6조(부설주차장의 설치기준)<br><br>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</article>
+					</div>
+					<div class="box">
+						<!-- [D]: 
+							btn_group 안에서만 버튼이 생성되고
+							button 생성되는 만큼 자동분할 됩니다.
+							class로 모양 & hover 다양한 효과 적용이 가능합니다.
+						-->
+						<div class="btn_group">
+							<button type="button">기본버튼</button>
+							<button type="button" class="bold">기본버튼 + 테두리 두껍게</button>
+						</div>
+						<!--버튼 hover효과 -->
+						<div class="btn_group">
+							<button type="button" class="secondary">hove시 테두리색</button>
+						</div>
+						<div class="btn_group">
+							<button type="button" class="secondary back">hove시 반전</button>
+						</div>
+						<div class="btn_group">
+							<button type="button" class="primary">배경+, hove시 배경색</button>
+						</div>
+						<!-- 라운드 형식 버튼 class round 추가-->
+						<div class="btn_group">
+							<button type="button" class="primary round">버튼</button>
+							<button type="button" class="secondary round">버튼</button>
+						</div>
+						<!--버튼 여러모양-->
+						<div class="btn_group">
+							<button type="button">기본버튼</button>
+							<button type="button" class="secondary">버튼</button>
+							<button type="button" class="secondary back">버튼</button>
+							<button type="button" class="primary">버튼</button>
+							<button type="button" class="round">버튼</button>
+							<button type="button" class="secondary round">버튼</button>
+							<button type="button" class="secondary round back">버튼</button>
+							<button type="button" class="primary round">버튼</button>
+						</div>
+						<!-- border 두께 추가 class bold 아이콘 혼합 버튼 -->
+						<div class="btn_group">
+							<button type="button" class="secondary bold round back cor_purple"><span>추가 (다수)필지 선택이 가능 합니다.</span>&nbsp;&nbsp;<i class="ico btn_icon_cl"><em>닫기</em></i></button>
+							<button type="button" class="primary"><span>건축가능여부 확인</span>&nbsp;&nbsp;<i class="ico btn_icon_ck"><em>체크</em></i></button>
+							<button type="button" class="primary"><i class="ico icon_down"><em>다운로드아이콘</em></i>&nbsp;&nbsp;<span>리포트 다운로드</span></button>
+						</div>
+					</div>
+					<div class="box">
+						<div class="">
+							<i class="ico icon_01"><em>아이콘</em></i>
+							<i class="ico icon_02"><em>아이콘</em></i>
+							<i class="ico icon_03"><em>아이콘</em></i>
+							<i class="ico icon_04"><em>아이콘</em></i>
+							<i class="ico icon_05"><em>아이콘</em></i>
+							<i class="ico icon_06"><em>아이콘</em></i>
+							<i class="ico icon_07"><em>아이콘</em></i>
+							<i class="ico icon_info"><em>아이콘</em></i>
+							<i class="ico search"><em>검색</em></i>
+							<i class="ico close"><em>닫기</em></i>
+							<i class="ico clock"><em>검색이력</em></i>
+						</div><br>
+						<div>
+							<i class="ico map_icon01"><em>대형마트</em></i>
+							<i class="ico map_icon02"><em>편의점</em></i>
+							<i class="ico map_icon03"><em>어린이집/유치원</em></i>
+							<i class="ico map_icon04"><em>학교</em></i>
+							<i class="ico map_icon05"><em>학원</em></i>
+							<i class="ico map_icon06"><em>주차장</em></i>
+							<i class="ico map_icon07"><em>주유정보</em></i>
+							<i class="ico map_icon08"><em>지하철역</em></i>
+							<i class="ico map_icon09"><em>은행</em></i>
+							<i class="ico map_icon10"><em>문화시설</em></i>
+							<i class="ico map_icon11"><em>중개업소</em></i>
+							<i class="ico map_icon12"><em>공공기관</em></i>
+							<i class="ico map_icon13"><em>관광명소</em></i>
+							<i class="ico map_icon14"><em>숙박</em></i>
+							<i class="ico map_icon15"><em>음식점</em></i>
+							<i class="ico map_icon16"><em>카페</em></i>
+							<i class="ico map_icon17"><em>병원</em></i>
+							<i class="ico map_icon18"><em>약국</em></i>
+						</div>
+						<div>
+							<div class="alarm red">
+								<i class="ico mark_red01"><em>경고</em></i>
+								<span>건축 가능여부 검토 결과가 없습니다.</span>
+							</div>
+							<div class="alarm red">
+								<i class="ico mark_red02"><em>불가</em></i>
+								<span>해당 건축물은 건축 (불)가능합니다.</span>
+							</div>
+						</div>
+						<div style="margin-top:24px; font-size:16px;">
+							<strong>텍스트 색상</strong><br> 
+							<span class="cor_purple">기본색상, </span>
+							<span class="cor_red">레드, </span>
+							<span class="cor_blue">하늘색, </span>
+							<span class="bg_purple cor_white">화이트</span>
+						</div>
+						<!--[D] 경고창 뜰때 class on 추가해주세요.-->
+						<div class="">
+							<div class="s_alret on">
+								<strong>화면 하단 경고창</strong>
+								<button type="button"><i class="ico btn_icon_cl"><em>닫기</em></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="popup_content">
+							<div class="inr">
+								<div class="p_header">
+									<strong>팝업타이틀</strong>
+								</div>
+								<div class="p_body">
+									<div class="scroll_y">
+										팝업내용
+									</div>
+								</div>
+								<div class="p_footer">
+									팝업하단
+									<div class="function_box">
+										<div class="btn_group">
+											<button type="button" class="secondary"><i class="ico icon_print"><em>아이콘</em></i><span>&nbsp;인쇄하기</span></button>
+											<button type="button" class="secondary"><i class="ico icon_downg"><em>아이콘</em></i><span>&nbsp;다운로드</span></button>
+											<button type="button" class="close" title="닫기"><i class="ico close"><em>아이콘</em></i></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="dim"></div> -->
+					</div>
+				</div>
+				<!-- tab 컨텐츠-->
+			</div>
+		</div>
+	</main>
+	<!-- //container -->
+</body>
+</html>
+<style>
+	.example_tab .tab_group .list_btn{display:flex;}
+	.example_tab .tab_group .list_btn > button{border:1px solid #E9ECEF;width:150px;margin-left:-1px;padding:20px 0;font-size:18px;}
+	.example_tab .tab_group .list_btn > button.on,.example_tab .tab_group .list_btn > button:hover{background:#3836A9;color:#fff}
+	.example_tab .tab_group .content{padding:20px;}
+	.example_tab .tab_group .content > .box{display:none;}
+	.example_tab .tab_group .content > .box.on{display:block;}
+</style>
