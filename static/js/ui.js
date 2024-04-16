@@ -1,11 +1,11 @@
 $(document).ready(function() {
     
     /*검색 포커싱*/
-    $('.search_box .search_input > input').focus(function(e){
-        $(this).parents('.search_box').addClass('focus');
+    $('.main_search .search_input > input').focus(function(e){
+        $(this).parents('.main_search').addClass('focus');
     });
-    $('.search_box .search_input > input').blur(function(e){
-        $(this).parents('.search_box').removeClass('focus');
+    $('.main_search .search_input > input').blur(function(e){
+        $(this).parents('.main_search').removeClass('focus');
     });
     /*탭메뉴*/ 
     $(document).on('click','.tab_group .list_btn > button',function(){
