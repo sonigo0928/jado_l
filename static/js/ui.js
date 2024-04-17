@@ -7,6 +7,9 @@ $(document).ready(function() {
     $('.main_search .search_input > input').blur(function(e){
         $(this).parents('.main_search').removeClass('focus');
     });
+    $(document).on('click','.main_search .close',function(){
+        $(this).parents('.result_box').css('display','none');
+    });
     /*탭메뉴*/ 
     $(document).on('click','.tab_group .list_btn > button',function(){
         var idx = $(this).index();
@@ -14,10 +17,11 @@ $(document).ready(function() {
         $(this).closest('.tab_group').find("> .content > .box:eq("+ idx +")").addClass('on').siblings().removeClass('on');
     });
     /*검색이력*/
-    $(document).on('click','.modal_btn',function(){
+    $(document).on('click','.modal .trigger_modal',function(){
         $(this).toggleClass('on');
         $(this).siblings('.btn_modal').toggleClass('on');
     });
+
     /*검색이력 > 닫기 버튼*/
     $(document).on('click','.record_list .list_box .inr .close_btn',function(){
         $(this).parents('.record_list').children("button").removeClass('on');
@@ -29,9 +33,11 @@ $(document).ready(function() {
         $(this).toggleClass('on');
         $(this).siblings('.list_box').toggleClass('on');
     });
+
     /*팝업닫기*/ 
     $(document).on('click','.popup_content .btn_group .close',function(){
         $(this).parents('.p_footer').parents('.popup_content').css('display','none');
+        $(this).parents('.popup_content').siblings('.dim').css('display','none');
     });
     /*화면 하단 팝업 닫기버튼 작동*/
     $(document).on('click','.s_alret > button',function(){
