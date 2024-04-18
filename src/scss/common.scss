@@ -94,7 +94,9 @@
                 border-radius:0 0 4px 4px;
                 box-shadow:0 6px 9px rgba(0,0,0,0.06);
                 & > .inr{
+                    overflow-y:auto;
                     padding-top:12px;
+                    max-height:426px;
                 }
                 .box{
                     & > a{
@@ -173,11 +175,13 @@
                     display:none;
                     position:relative;
                 .inr{
+                    overflow-y:scroll;
                     position:absolute;
                     top:40px;
                     right:0;
                     width:448px;
                     height:auto;
+                    max-height:320px;
                     padding:24px;
                     background:#fff;
                     border:1px solid #666;
@@ -900,8 +904,13 @@ table{
             & > span {
                 vertical-align:middle;
                 &.name{
+                    overflow:hidden;
                     display:inline-block;
-                    padding:0 8px;
+                    max-width:243px;
+                    padding:0 3px 0 8px;
+                    text-overflow:ellipsis;
+                    white-space:nowrap;
+                    word-break:break-all;
                 }
             }
         }
@@ -979,16 +988,23 @@ table{
                 }
                 & > li{
                     overflow:hidden;
+                    display:flex;
                     margin-bottom:18px;
+                    flex-wrap:wrap;
+                    flex-basis:auto;
+                    justify-content:space-between;
                     & > span{
-                        float:left;
-                        width:50%;
+                        width:35%;
                         box-sizing:border-box;
                         text-align:right;
                         &:first-child{
+                            overflow: hidden;
                             position:relative;
+                            width:65%;
                             padding-left:18px;
                             text-align:left;
+                            white-space:nowrap;
+                            text-overflow:ellipsis;
                             &::after{
                                 position:absolute;
                                 top:4px;
@@ -1316,7 +1332,7 @@ table{
         & > .btn_modal{
             display:none;
             position: absolute;
-            top:56px;
+            top:44px;
             left:0;
             width:426px;
             height:427px;
