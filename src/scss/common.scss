@@ -451,12 +451,6 @@
     &.icon_09{
         @include sprite($sp-ico-icon-jelly09);
     }
-    &.icon_10{
-        @include sprite($sp-ico-icon-jelly10);
-    }
-    &.icon_11{
-        @include sprite($sp-ico-icon-jelly11);
-    }
     &.mark_red01{
         @include sprite($sp-ico-mark-red01);
     }
@@ -1074,7 +1068,7 @@ table{
             }
         }
     }
-    .jelly_09{
+    .jelly_05{
         ul{
             & > li{
                 & > span{
@@ -1087,7 +1081,7 @@ table{
             }
         }
     }
-    .jelly_10{
+    .jelly_04{
         ul{
             & > li{
                 & > span{
@@ -1100,7 +1094,7 @@ table{
             }
         }
     }
-    .jelly_11{
+    .jelly_09{
         ul{
             & > li{
                 & > span{

@@ -61,12 +61,12 @@ $(document).ready(function() {
     /* 입지정보 */
     $('.toggle_box ul').each(function(e){
         var list_len = $(this).children('li').length;
-        if(list_len == 4){
+        if(list_len >= 4 && list_len < 7){
             $(this).siblings('.toggle_footer').children('button').show();
-        } else if(list_len >= 6){
+        } else if(list_len >= 7){
             $(this).siblings('.toggle_footer').children('button').hide();
             $(this).css('max-height','186px').siblings('.toggle_footer').children('.summary').show();
-        }
+        } 
     });
     /* 토글 더보기 박스 */
     $(document).on('click','.toggle_box > .toggle_footer > button',function(){
