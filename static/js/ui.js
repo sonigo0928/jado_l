@@ -57,4 +57,25 @@ $(document).ready(function() {
         $(this).parent('.option_list').removeClass('active');
         $(this).parent('.option_list').siblings('button').removeClass('active');
     });
+
+    /* 입지정보 */
+    $('.toggle_box ul').each(function(e){
+        var list_len = $(this).children('li').length;
+        if(list_len == 4){
+            $(this).siblings('.toggle_footer').children('button').show();
+        } else if(list_len >= 6){
+            $(this).siblings('.toggle_footer').children('button').hide();
+            $(this).css('max-height','186px').siblings('.toggle_footer').children('.summary').show();
+        }
+    });
+    /* 토글 더보기 박스 */
+    $(document).on('click','.toggle_box > .toggle_footer > button',function(){
+        $(this).toggleClass('active');
+        $(this).parents('.toggle_footer').siblings('ul').toggleClass('on');
+        if($(this).hasClass("active")){
+            $(this).find("span").text("닫기");
+        } else {
+            $(this).find("span").text("더보기");
+        }
+    });
 });

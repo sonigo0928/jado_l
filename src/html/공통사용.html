@@ -383,6 +383,31 @@
 							<button type="button" class="primary"><span>건축가능여부 확인</span>&nbsp;&nbsp;<i class="ico btn_icon_ck"><em>체크</em></i></button>
 							<button type="button" class="primary"><i class="ico icon_down"><em>다운로드아이콘</em></i>&nbsp;&nbsp;<span>리포트 다운로드</span></button>
 						</div>
+						<!-- 버튼형시 탭 -->
+						<div class="">
+							<div class="tab_group style_btn">
+								<div class="list_btn">
+									<button type="button" class="on">버튼 1</button>
+									<button type="button">버튼 2</button>
+									<button type="button">버튼 3</button>
+									<button type="button">버튼 4</button>
+								</div>
+								<div class="content">
+									<div class="box on">
+										하나
+									</div>
+									<div class="box">
+										둘
+									</div>
+									<div class="box">
+										셋
+									</div>
+									<div class="box">
+										넷
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="box">
 						<div class="">
@@ -393,6 +418,10 @@
 							<i class="ico icon_05"><em>아이콘</em></i>
 							<i class="ico icon_06"><em>아이콘</em></i>
 							<i class="ico icon_07"><em>아이콘</em></i>
+							<i class="ico icon_08"><em>아이콘</em></i>
+							<i class="ico icon_09"><em>아이콘</em></i>
+							<i class="ico icon_10"><em>아이콘</em></i>
+							<i class="ico icon_11"><em>아이콘</em></i>
 							<i class="ico icon_info"><em>아이콘</em></i>
 							<i class="ico search"><em>검색</em></i>
 							<i class="ico close"><em>닫기</em></i>
@@ -464,7 +493,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- <div class="dim"></div> -->
+						<div class="dim"></div>
 					</div>
 				</div>
 				<!-- tab 컨텐츠-->
@@ -475,9 +504,9 @@
 </body>
 </html>
 <style>
-	.example_tab .tab_group .list_btn{display:flex;}
+	.example_tab .tab_group .list_btn{display:flex;justify-content:start;}
 	.example_tab .tab_group .list_btn > button{border:1px solid #E9ECEF;width:150px;margin-left:-1px;padding:20px 0;font-size:18px;}
-	.example_tab .tab_group .list_btn > button.on,.example_tab .tab_group .list_btn > button:hover{background:#3836A9;color:#fff}
+	.example_tab .tab_group .list_btn > button.on,.example_tab .tab_group .list_btn > button:hover{background:#4B48E2;color:#fff}
 	.example_tab .tab_group .content{padding:20px;}
 	.example_tab .tab_group .content > .box{display:none;}
 	.example_tab .tab_group .content > .box.on{display:block;}
