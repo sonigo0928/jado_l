@@ -811,6 +811,91 @@ article{
         overflow:hidden;
         text-align:center;
     }
+    .around_group{
+        & > p{
+            &.box{
+                padding:16px;
+                border:1px solid #E9ECEF;
+                border-radius:4px;
+                & > strong{
+                    display:block;
+                    color:#333;
+                }
+                & > span{
+                    display:inline-block;
+                    margin-top:8px;
+                    color:#666;
+                }
+            }
+        }
+        ul{
+            display:flex;
+            margin-top:16px;
+            padding:16px 20px;
+            background:#F8F9FA;
+            justify-content:space-between;
+            flex-wrap:wrap;
+            & > li{
+                width:auto;
+                text-align:center;
+                flex:auto;
+                border-right:1px solid #E9ECEF;
+                &:last-child{
+                    border-right:none;
+                }
+                & > span{
+                    display:block;
+                    font-size:14px;
+                    color:#999;
+                }
+                & > strong{
+                    display:block;
+                    margin-top:6px;
+                    font-size:18px;
+                    color:#333;
+                }
+            }
+        }
+        & small{
+            display:block;
+            margin-top:16px;
+            font-size:12px;
+            color:#666;
+            text-align:right;
+        }
+        & > .box{
+            margin-top:32px;
+            border-top:1px solid #E9ECEF;
+            & > .c_title{
+                display:block;
+                margin:16px 0;
+                font-family:'Pretendard-semib';
+                font-size:16px;
+                color:#333;
+                & > span{
+                    margin-left:8px;
+                    vertical-align:middle;
+                }
+            }
+            & > .item{
+                margin-top:16px;
+                & > span{
+                    display:block;
+                    padding:10px 18px;
+                    background:#F8F9FA;
+                    font-size:14px;
+                    color:#666;
+                    & > em{
+                        color:#4B48E2;
+                    }
+                }
+                & > .row{
+                    margin:0;
+                    padding:16px 0;
+                }
+            }
+        }
+    }
 }
 table{
     width:100%;

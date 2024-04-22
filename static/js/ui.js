@@ -57,6 +57,10 @@ $(document).ready(function() {
         $(this).parent('.option_list').removeClass('active');
         $(this).parent('.option_list').siblings('button').removeClass('active');
     });
+    $(document).on('click','.option_list > li',function(){
+        var txt = $(this).text();
+        $(this).parent('.option_list').removeClass('active').siblings('button').children('span').text(txt);
+    });
 
     /* 입지정보 */
     $('.toggle_box ul').each(function(e){
